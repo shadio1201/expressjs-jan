@@ -7,9 +7,11 @@ html
         header
             ul
                 li
-                    a(class={linkActive: currentUrl === '/'} href='/') Home 
+                    a(class=(page === "index" ? "linkActive" : null) href='/') Home 
                 li 
-                    a(class={linkActive: currentUrl === '/about'} href='/about') About
+                    a(class=(page === "about" ? "linkActive" : null) href='/about') About
+                li 
+                    a(class=(page === "user" ? "linkActive" : null) href='/user') User
         block content
         block footer
             div.footer

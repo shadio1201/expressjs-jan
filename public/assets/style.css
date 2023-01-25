@@ -43,6 +43,32 @@ header ul li a {
     padding: 0px 25px;
 }
 
+.fetchData {
+    padding: 5px 10px;
+}
+
+.fetchData,
+.displayData {
+    margin: 0px 25px;
+}
+
+.appear {
+    animation: appear 300ms ease-in-out forwards;
+    opacity: 0;
+    animation-delay: var(--delay);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .footer {
     background-color: #5f5f5f;
     color: white;
