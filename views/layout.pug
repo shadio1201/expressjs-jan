@@ -1,0 +1,16 @@
+html
+    head 
+        title The pug site
+        style
+            include ../public/assets/style.css
+    body
+        header
+            ul
+                li
+                    a(class={linkActive: currentUrl === '/'} href='/') Home 
+                li 
+                    a(class={linkActive: currentUrl === '/about'} href='/about') About
+        block content
+        block footer
+            div.footer
+                p Ting der står i en footer
