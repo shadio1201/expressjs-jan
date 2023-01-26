@@ -1,17 +1,17 @@
-document.querySelector('.submitEmail').addEventListener('submit', (e)=> {
-    e.preventDefault()
+document.querySelector('.submitForm').addEventListener('submit', (e)=> {
+    e.preventDefault();
 
     let email = document.querySelector('.email').value
     document.querySelector('.email').value = ""
 
     fetch('http://localhost:3000/form', {
         method: "POST",
-        body: JSON.stringify({
-            content: email
-        }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
-          }
+          },
+        body: JSON.stringify({
+            content: email
+        })
     }).then(response => {
         console.log(response)
     }).catch(err => {

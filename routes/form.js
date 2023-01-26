@@ -4,8 +4,9 @@ const router = express.Router();
 const emails = []
 
 router.post('/', (req, res) => {
-    let data = JSON.parse(req.body)
-    emails.push(data.content)
+    let data = req.body
+    emails.push(data)
+    console.log(emails)
     res.send('Email saved!')
 })
 
