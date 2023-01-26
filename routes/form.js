@@ -1,12 +1,13 @@
 const express = require('express');
+let bodyParser = require('body-parser')
 const router = express.Router();
-
+router.use(bodyParser.json());
 const emails = []
 
+
 router.post('/', (req, res) => {
-    let data = req.body
+    let data = req.body.content
     emails.push(data)
-    console.log(emails)
     res.send('Email saved!')
 })
 

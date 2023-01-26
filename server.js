@@ -6,12 +6,7 @@ const continents = require('./continents');
 
 const formRouter = require('./routes/form')
 app.use('/form', formRouter);
-app.use(
-    express.urlencoded({
-        extended: false,
-    })
-)
-app.use(express.json());
+
 
 app.set('view engine', 'pug');
 app.use(express.static('public'));
